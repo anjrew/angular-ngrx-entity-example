@@ -1,4 +1,10 @@
-# AngularNgrxEntityExample
+# Angular Ngrx Entity Example
+
+This is a basic application which explores the NGRX entity library.
+
+It uses the 'Store' and 'entity' packages of the NGRX ecosystem.
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
 

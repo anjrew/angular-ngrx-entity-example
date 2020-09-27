@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-ngrx-entity-example"
+    }
+  },
+  "defaultProject": "angular-ngrx-entity-example",
+  "cli": {
+    "analytics": false
+  }
 }

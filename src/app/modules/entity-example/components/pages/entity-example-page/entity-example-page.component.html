@@ -1,0 +1,14 @@
+<h1>NGRX Entity example</h1>
+
+<div *ngFor="let entity of entities$ | async" class="entity">
+
+  <h3> Name: {{ entity.name }}</h3>
+  <h3> ID: {{ entity.id }}</h3>
+  <h3> Selected: {{ entity.selected }}</h3>
+
+  <button type="button" (click)="updateEntity(entity)" style="background-color: gold;">Update Entity</button>
+  <button type="button" (click)="deleteEntity(entity)" style="background-color: tomato;">Delete Entity</button>
+</div>
+
+
+<button type="button" (click)="addEntity()">Add Entity</button>
