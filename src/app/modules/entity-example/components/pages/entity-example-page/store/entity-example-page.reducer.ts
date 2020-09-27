@@ -13,18 +13,19 @@ export const entityExamplePageReducer = createReducer(
     (state) => ({...state}),
   ),
 
+  /* Use predefined methods for manipulating the data */
   on(
     Actions.CREATE,
-    (state, action) => exampleEntityAdapter.addOne(action.entity, state),
+    (state, action) => ({ ...state, entities: exampleEntityAdapter.addOne(action.entity, state.entities) }),
   ),
 
   on(
     Actions.UPDATE,
-    (state, action) => exampleEntityAdapter.updateOne({ id: action.changes.id, changes:action.changes }, state)
+    (state, action) => ({ ...state, entities: exampleEntityAdapter.updateOne({ id: action.changes.id, changes: action.changes }, state.entities) })
   ),
 
   on(
     Actions.DELETE,
-    (state, action) => exampleEntityAdapter.removeOne(action.id, state)
-  )
+    (state, action) => ({ ...state, entities:  exampleEntityAdapter.removeOne(action.id,  state.entities) })
+    ),
 );

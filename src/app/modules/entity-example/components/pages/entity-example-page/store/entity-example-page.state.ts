@@ -15,18 +15,25 @@ export interface ExampleEntity {
 export const exampleEntityAdapter = createEntityAdapter<ExampleEntity>()
 
 
-export interface EntityExamplePageState extends EntityState<ExampleEntity>{};
+export interface EntityExamplePageState {
+  entities: EntityState<ExampleEntity>
+};
 
 
 const defaultExampleEntityState: EntityExamplePageState = {
-  ids: [123],
+
   entities: {
-    123: {
-      id: 123,
-      name: 'First example entity',
-      selected: false
+
+    ids: [123],
+    entities: {
+      123: {
+        id: 123,
+        name: 'First example entity',
+        selected: false
+      }
     }
   }
+
 };
 
 

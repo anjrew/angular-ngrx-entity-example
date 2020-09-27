@@ -5,18 +5,19 @@ export const initialize = createAction(
   '[entity-example-page] initialize'
 );
 
+/* Basic CRUD operations for the actions are created for manipulating the data */
 export const CREATE = createAction(
-  '[NameSpace] CREATE',
+  '[entity-example-page] CREATE',
   props<{entity: ExampleEntity}>()
 );
 
 export const UPDATE = createAction(
-  '[NameSpace] UPDATE',
+  '[entity-example-page] UPDATE',
   props<{changes: Partial<ExampleEntity>}>()
 );
 
 export const DELETE = createAction(
-  '[NameSpace] DELETE',
+  '[entity-example-page] DELETE',
    props<{id: number}>()
 );
 
